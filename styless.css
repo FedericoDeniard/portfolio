@@ -21,6 +21,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 /* Intro */
@@ -79,7 +80,7 @@ h2 {
 
 .projects {
   scroll-snap-type: x mandatory;
-  overflow-y: scroll;
+  overflow-x: hidden;
   will-change: transform;
   -ms-scroll-snap-type: mandatory; /* Prefijo para navegadores Microsoft (IE/Edge) */
   -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos iOS */
@@ -100,6 +101,10 @@ h2 {
   -webkit-tap-highlight-color: transparent;
   scroll-snap-align: none;
   display: inline-flex;
+}
+
+.card:first-child {
+  margin-left: 80px;
 }
 
 .card:focus {
@@ -171,4 +176,110 @@ h2 {
 .touch .text {
   opacity: 1;
   transform: translateY(10%);
+}
+
+/* Skills */
+.skills-graph {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill {
+  font-size: 25px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 5px;
+  padding: 0px 20px;
+}
+.skill input {
+  width: 60vw;
+  margin-left: auto;
+}
+
+.range:disabled {
+  width: 80%;
+  max-width: 600px;
+  appearance: none;
+  height: 5px;
+  border-radius: 100px;
+  width: 60vw;
+}
+
+.range:disabled::-webkit-slider-thumb {
+  appearance: none;
+}
+
+.html:disabled {
+  background: linear-gradient(
+    to right,
+    #007bff 0%,
+    #007bff var(--value, 80%),
+    #ccc var(--value, 80%),
+    #ccc 100%
+  );
+}
+
+.css:disabled {
+  background: linear-gradient(
+    to right,
+    #007bff 0%,
+    #007bff var(--value, 70%),
+    #ccc var(--value, 70%),
+    #ccc 100%
+  );
+}
+
+.js:disabled {
+  background: linear-gradient(
+    to right,
+    #007bff 0%,
+    #007bff var(--value, 50%),
+    #ccc var(--value, 50%),
+    #ccc 100%
+  );
+}
+
+.git:disabled {
+  background: linear-gradient(
+    to right,
+    #007bff 0%,
+    #007bff var(--value, 50%),
+    #ccc var(--value, 50%),
+    #ccc 100%
+  );
+}
+
+/* Languages */
+
+.lang-graph {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.esp:disabled {
+  background: linear-gradient(
+    to right,
+    #007bff 0%,
+    #007bff var(--value, 100%),
+    #ccc var(--value, 100%),
+    #ccc 100%
+  );
+}
+
+.eng:disabled {
+  background: linear-gradient(
+    to right,
+    #007bff 0%,
+    #007bff var(--value, 60%),
+    #ccc var(--value, 60%),
+    #ccc 60%
+  );
 }
