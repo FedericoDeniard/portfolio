@@ -13,6 +13,34 @@ for (let i = 0; i < cards.length; i++) {
   });
 }
 
+// Cards arrows
+
+/* const cardContainer = document.querySelector(".cards-container");
+const leftArrow = document.getElementById("leftArrow");
+const rightArrow = document.getElementById("rightArrow");
+
+let cardIndex = 0;
+
+leftArrow.addEventListener("click", () => {
+  if (cardIndex > 0) {
+    cardIndex--;
+    scrollToCurentCard();
+  }
+});
+
+rightArrow.addEventListener("click", () => {
+  if (cardIndex < cards.length - 1) {
+    cardIndex++;
+    scrollToCurentCard();
+  }
+});
+
+function scrollToCurentCard() {
+  const cardWidth = cards[cardIndex].offsetWidth;
+  const newPosition = -cardIndex * cardWidth;
+  cardContainer.style.transform = `translateX(${newPosition}px)`;
+} */
+
 // Footer
 const linkedIn = document.getElementById("linkedin");
 const gitHub = document.getElementById("github");
