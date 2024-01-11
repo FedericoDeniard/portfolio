@@ -150,11 +150,11 @@ h2 {
 }
 
 .even {
-  background-color: #e8c3a0;
+  background-color: #c0c5e1;
 }
 
 .odd {
-  background-color: #ffe4b5;
+  background-color: #fff399;
 }
 
 .cards-container {
@@ -321,4 +321,8 @@ footer {
 .icon {
   height: 30px;
   width: 30px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 767px) {
 }
