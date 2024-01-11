@@ -106,6 +106,9 @@ h2 {
 .card:first-child {
   margin-left: 80px;
 }
+.card:last-child {
+  margin-right: 80px;
+}
 
 .card:focus {
   outline: none;
