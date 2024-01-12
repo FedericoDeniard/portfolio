@@ -15,7 +15,7 @@ for (let i = 0; i < cards.length; i++) {
 
 // Button
 const contactButton = document.querySelector(".button");
-contactButton.addEventListener("contextmenu", function (e) {
+contactButton.addEventListener("touchstart", function (e) {
   e.preventDefault();
 });
 
