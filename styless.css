@@ -319,6 +319,10 @@ h2 {
   user-select: text;
 }
 
+.contact {
+  margin-bottom: 60px;
+}
+
 /* Footer */
 
 footer {
@@ -329,6 +333,9 @@ footer {
   align-items: center;
   padding: 0px 20px;
   justify-content: space-between;
+  bottom: 0;
+  position: fixed;
+  background-color: #fff;
 }
 
 .social-media {
