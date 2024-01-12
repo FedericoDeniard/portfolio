@@ -111,6 +111,8 @@ h2 {
   user-select: none;
   scroll-snap-align: none;
   display: inline-flex;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .card:first-child {
@@ -366,8 +368,6 @@ footer {
 
   .card {
     scroll-snap-align: center;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 
   .card:hover {
