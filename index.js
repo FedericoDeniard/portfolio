@@ -43,19 +43,13 @@ home.addEventListener("click", () => {
 
 const themeButton = document.getElementById("theme");
 
-let darkTheme = localStorage.getItem("darkTheme") === "false";
-console.log(darkTheme);
+let darkTheme = false;
 themeButton.addEventListener("click", () => {
-  if (darkTheme === false) {
-    darkTheme = true;
-    applyTheme();
-    console.log(darkTheme);
-  } else {
-    darkTheme = false;
-    applyTheme();
-    console.log(darkTheme);
-  }
+  darkTheme = !darkTheme;
+  applyTheme();
 });
+
+// darkTheme.addEventListener("change", () => {});
 
 //  Objets to change
 const body = document.getElementById("body");
