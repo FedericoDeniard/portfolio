@@ -14,10 +14,12 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 // Button
-const contactButton = document.querySelector(".button");
-contactButton.addEventListener("contextmenu", function (e) {
-  e.preventDefault();
-});
+const contactButtons = document.getElementsByClassName("button");
+for (const button of contactButtons) {
+  button.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+}
 
 // Cards arrows
 
