@@ -61,6 +61,7 @@ const h3 = document.getElementsByTagName("h3");
 const p = document.getElementsByTagName("p");
 const labels = document.getElementsByTagName("label");
 const myselfPic = document.getElementById("myself-pic");
+const footer = document.getElementsByTagName("footer")[0];
 
 function applyTheme() {
   if (darkTheme) {
@@ -93,6 +94,7 @@ function applyTheme() {
     for (const button of contactButtons) {
       button.classList.add("dark-button");
     }
+    footer.classList.add("dark-footer");
   } else {
     body.classList.remove("dark-body");
     for (const evenCard of evenCards) {
@@ -123,5 +125,6 @@ function applyTheme() {
     for (const button of contactButtons) {
       button.classList.remove("dark-button");
     }
+    footer.classList.remove("dark-footer");
   }
 }

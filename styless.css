@@ -354,6 +354,10 @@ footer {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.dark-footer {
+  background-color: rgba(50, 50, 50, 1);
+}
+
 .dark-cards {
   box-shadow: 7px 7px 10px 1px rgba(0, 0, 0, 1);
 }
