@@ -21,34 +21,6 @@ for (const button of contactButtons) {
   });
 }
 
-// Cards arrows
-
-/* const cardContainer = document.querySelector(".cards-container");
-const leftArrow = document.getElementById("leftArrow");
-const rightArrow = document.getElementById("rightArrow");
-
-let cardIndex = 0;
-
-leftArrow.addEventListener("click", () => {
-  if (cardIndex > 0) {
-    cardIndex--;
-    scrollToCurentCard();
-  }
-});
-
-rightArrow.addEventListener("click", () => {
-  if (cardIndex < cards.length - 1) {
-    cardIndex++;
-    scrollToCurentCard();
-  }
-});
-
-function scrollToCurentCard() {
-  const cardWidth = cards[cardIndex].offsetWidth;
-  const newPosition = -cardIndex * cardWidth;
-  cardContainer.style.transform = `translateX(${newPosition}px)`;
-} */
-
 // Footer
 const linkedIn = document.getElementById("linkedin");
 const gitHub = document.getElementById("github");
@@ -66,3 +38,96 @@ gitHub.addEventListener("click", () => {
 home.addEventListener("click", () => {
   window.location.href = "#intro";
 });
+
+//  Dark Theme
+
+const themeButton = document.getElementById("theme");
+
+let darkTheme = localStorage.getItem("darkTheme") === "false";
+console.log(darkTheme);
+themeButton.addEventListener("click", () => {
+  if (darkTheme === false) {
+    darkTheme = true;
+    applyTheme();
+    console.log(darkTheme);
+  } else {
+    darkTheme = false;
+    applyTheme();
+    console.log(darkTheme);
+  }
+});
+
+//  Objets to change
+const body = document.getElementById("body");
+const evenCards = document.getElementsByClassName("even");
+const oddsCards = document.getElementsByClassName("odd");
+const h1 = document.getElementsByTagName("h1");
+const h2 = document.getElementsByTagName("h2");
+const h3 = document.getElementsByTagName("h3");
+const p = document.getElementsByTagName("p");
+const labels = document.getElementsByTagName("label");
+const myselfPic = document.getElementById("myself-pic");
+
+function applyTheme() {
+  if (darkTheme) {
+    body.classList.add("dark-body");
+    for (const evenCard of evenCards) {
+      evenCard.classList.add("dark-even");
+    }
+    for (const oddCard of oddsCards) {
+      oddCard.classList.add("dark-odd");
+    }
+    for (const card of cards) {
+      card.classList.add("dark-cards");
+    }
+    for (const title of h1) {
+      title.classList.add("dark-h1");
+    }
+    for (const title of h2) {
+      title.classList.add("dark-h2");
+    }
+    for (const title of h3) {
+      title.classList.add("dark-h3");
+    }
+    for (const text of p) {
+      text.classList.add("dark-p");
+    }
+    for (const label of labels) {
+      label.classList.add("dark-label");
+    }
+    myselfPic.classList.add("dark-image");
+    for (const button of contactButtons) {
+      button.classList.add("dark-button");
+    }
+  } else {
+    body.classList.remove("dark-body");
+    for (const evenCard of evenCards) {
+      evenCard.classList.remove("dark-even");
+    }
+    for (const oddCard of oddsCards) {
+      oddCard.classList.remove("dark-odd");
+    }
+    for (const card of cards) {
+      card.classList.remove("dark-cards");
+    }
+    for (const title of h1) {
+      title.classList.remove("dark-h1");
+    }
+    for (const title of h2) {
+      title.classList.remove("dark-h2");
+    }
+    for (const title of h3) {
+      title.classList.remove("dark-h3");
+    }
+    for (const text of p) {
+      text.classList.remove("dark-p");
+    }
+    for (const label of labels) {
+      label.classList.remove("dark-label");
+    }
+    myselfPic.classList.remove("dark-image");
+    for (const button of contactButtons) {
+      button.classList.remove("dark-button");
+    }
+  }
+}
