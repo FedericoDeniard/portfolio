@@ -13,6 +13,12 @@ for (let i = 0; i < cards.length; i++) {
   });
 }
 
+// Button
+const contactButton = document.getElementsByClassName("button");
+contactButton.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
 // Cards arrows
 
 /* const cardContainer = document.querySelector(".cards-container");
