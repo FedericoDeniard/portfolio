@@ -14,7 +14,7 @@ for (let i = 0; i < cards.length; i++) {
 }
 
 // Button
-const contactButton = document.getElementsByClassName("button");
+const contactButton = document.querySelector(".button");
 contactButton.addEventListener("contextmenu", function (e) {
   e.preventDefault();
 });
