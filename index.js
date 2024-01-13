@@ -144,7 +144,7 @@ function sendEmail(e) {
   const message = document.getElementById("message");
 
   Email.send({
-    SecureToken: "e3c95186-7469-4fbd-99db-b53a538ddd0f",
+    SecureToken: " 07646e85-d00a-4804-8cdd-8f6a646ef7c9",
     To: "fededeniard@gmail.com",
     From: email.value,
     Subject: subject.value,
