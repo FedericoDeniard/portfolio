@@ -454,6 +454,10 @@ footer {
   background-color: #b3a033;
 }
 
+.dark-message {
+  color: rgba(140, 140, 140, 1);
+}
+
 /* Desktop */
 @media only screen and (min-width: 767px) {
   body {
