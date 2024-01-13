@@ -330,13 +330,14 @@ h2 {
   margin-top: 50px;
 }
 
-.contact-form input {
+.contact-form .input {
   border: none;
   border-bottom: 1px solid #000;
   width: 100%;
   max-width: 350px;
   padding: 0px 10px;
   height: 30px;
+  background-color: transparent;
 }
 
 #message {
@@ -348,6 +349,7 @@ h2 {
   padding: 5px;
   overflow: hidden;
   transition: 0s;
+  background-color: transparent;
 }
 
 .submit-area {
@@ -358,19 +360,31 @@ h2 {
   gap: 10px;
 }
 
-#submit-img {
+#submit {
+  border: none;
+  padding: 0;
+  width: fit-content;
+  max-width: fit-content;
+  height: fit-content;
+}
+
+.submit {
+  width: fit-content;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.submit-img {
   cursor: pointer;
   font-size: 20px;
   display: flex;
   align-items: center;
 }
 
-#submit {
-  border: none;
-  width: fit-content;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: transparent;
+.dark-submit {
+  color: white;
 }
 
 /* Footer */

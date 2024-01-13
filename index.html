@@ -126,18 +126,18 @@
         </div>
         <form class="contact-form" id="contactform">
             <label for="name">*Nombre:</label>
-            <input type="text" name="Nombre" id="name" placeholder="Nombre" required>
+            <input class="input" type="text" name="Nombre" id="name" placeholder="Nombre" required>
             <label for="email" class="email">*Email:</label>
-            <input type="email" name="Email" id="email" placeholder="Email" required>
+            <input class="input" type="email" name="Email" id="email" placeholder="Email" required>
             <label for="phone">Teléfono:</label>
-            <input type="tel" name="Teléfono" id="phone" placeholder="Teléfono" pattern="[0-9]*">
+            <input class="input" type="tel" name="Teléfono" id="phone" placeholder="Teléfono" pattern="[0-9]*">
             <label for="subject">*Asunto:</label>
-            <input type="text" name="Asunto" id="subject" placeholder="Asunto" required>
+            <input class="input" type="text" name="Asunto" id="subject" placeholder="Asunto" required>
             <label for="message">*Mensaje:</label>
             <textarea name="Mensaje" id="message" placeholder="Mensaje" required oninput="autoExpand(this)"></textarea>
             <div class="submit-area">
-                <input type="submit" id="submit">
-                <label for="submit" id="submit-img"><img src="./assets/icons/right.svg"></label>
+                <input class="input submit" type="submit" id="submit">
+                <label for="submit" id="submit-img" class="submit-img"><img src="./assets/icons/right.svg"></label>
             </div>
         </form>
     </section>
