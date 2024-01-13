@@ -124,6 +124,22 @@
                 <p>Teléfono: (+54)11 6828-7827</p>
             </div>
         </div>
+        <form class="contact-form" id="contactform">
+            <label for="name">*Nombre:</label>
+            <input type="text" name="Nombre" id="name" placeholder="Nombre">
+            <label for="email" class="email">*Email:</label>
+            <input type="email" name="Email" id="email" placeholder="Email">
+            <label for="phone">Teléfono:</label>
+            <input type="tel" name="Teléfono" id="phone" placeholder="Teléfono" pattern="[0-9]*">
+            <label for="subject">*Asunto:</label>
+            <input type="text" name="Asunto" id="subject" placeholder="Asunto">
+            <label for="message">*Mensaje:</label>
+            <textarea name="Mensaje" id="message" placeholder="Mensaje"></textarea>
+            <div class="submit-area">
+                <input type="submit" id="submit">
+                <label for="submit" id="submit-img"><img src="./assets/icons/right.svg"></label>
+            </div>
+        </form>
     </section>
     <footer>
         <img class="icon" id="home" src="./assets/icons/home.svg">
@@ -133,6 +149,7 @@
         </div>
         <img class="icon" id="theme" src="./assets/icons/theme.svg">
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
 </body>
 

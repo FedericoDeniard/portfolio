@@ -128,3 +128,28 @@ function applyTheme() {
     footer.classList.remove("dark-footer");
   }
 }
+
+// Form
+
+const form = document.getElementById("contactform");
+const contactSubmit = document.getElementById("submit");
+const contactSubmitImg = document.getElementById("submit-img");
+
+function sendEmail(e) {
+  e.preventDefault();
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const subject = document.getElementById("subject");
+  const message = document.getElementById("message");
+
+  Email.send({
+    SecureToken: "e3c95186-7469-4fbd-99db-b53a538ddd0f",
+    To: "fededeniard@gmail.com",
+    From: email.value,
+    Subject: subject.value,
+    Body: message.value,
+  }).then((message) => alert(message));
+}
+
+form.addEventListener("submit", sendEmail);
