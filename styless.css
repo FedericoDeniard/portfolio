@@ -350,6 +350,7 @@ h2 {
   overflow: hidden;
   transition: 0s;
   background-color: transparent;
+  border-radius: 5px;
 }
 
 .submit-area {
