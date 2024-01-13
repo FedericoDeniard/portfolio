@@ -330,14 +330,12 @@ h2 {
   margin-top: 50px;
 }
 
-.contact-form label {
-}
-
 .contact-form input {
   border: none;
   border-bottom: 1px solid #000;
   width: 80%;
   padding: 0px 10px;
+  height: 30px;
 }
 
 #message {
@@ -345,6 +343,9 @@ h2 {
   min-height: 50px;
   height: auto;
   resize: none;
+  padding: 5px;
+  overflow: hidden;
+  transition: 0s;
 }
 
 .submit-area {

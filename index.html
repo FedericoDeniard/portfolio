@@ -134,7 +134,7 @@
             <label for="subject">*Asunto:</label>
             <input type="text" name="Asunto" id="subject" placeholder="Asunto" required>
             <label for="message">*Mensaje:</label>
-            <textarea name="Mensaje" id="message" placeholder="Mensaje" required></textarea>
+            <textarea name="Mensaje" id="message" placeholder="Mensaje" required oninput="autoExpand(this)"></textarea>
             <div class="submit-area">
                 <input type="submit" id="submit">
                 <label for="submit" id="submit-img"><img src="./assets/icons/right.svg"></label>

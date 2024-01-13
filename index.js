@@ -132,8 +132,6 @@ function applyTheme() {
 // Form Elastic Email SMTPJS
 
 const form = document.getElementById("contactform");
-const contactSubmit = document.getElementById("submit");
-const contactSubmitImg = document.getElementById("submit-img");
 
 function sendEmail(e) {
   e.preventDefault();
@@ -153,9 +151,21 @@ function sendEmail(e) {
     Phone: ${phone.value} <br>
     Message: 
     ${message.value}`,
-  }).then((message) =>
+  }).then(() =>
     alert("Tu email fue enviado correctamente ¡Gracias por contactarte!")
   );
 }
 
 form.addEventListener("submit", sendEmail);
+
+// Expand Text Area
+
+function autoExpand(textarea) {
+  textarea.style.height = "0";
+  textarea.style.height = textarea.scrollHeight + "px";
+}
+
+const messageTextarea = document.getElementById("message");
+messageTextarea.addEventListener("input", function () {
+  autoExpand(this);
+});
