@@ -128,3 +128,44 @@ function applyTheme() {
     footer.classList.remove("dark-footer");
   }
 }
+
+// Form Elastic Email SMTPJS
+
+const form = document.getElementById("contactform");
+
+function sendEmail(e) {
+  e.preventDefault();
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const subject = document.getElementById("subject");
+  const message = document.getElementById("message");
+
+  Email.send({
+    SecureToken: "07646e85-d00a-4804-8cdd-8f6a646ef7c9",
+    To: "fededeniard@gmail.com",
+    From: "fededeniard@gmail.com",
+    Subject: subject.value,
+    Body: `From: ${email.value} <br>
+    Name: ${name.value} <br>
+    Phone: ${phone.value} <br>
+    Message: 
+    ${message.value}`,
+  }).then(() =>
+    alert("Tu email fue enviado correctamente ¡Gracias por contactarte!")
+  );
+}
+
+form.addEventListener("submit", sendEmail);
+
+// Expand Text Area
+
+function autoExpand(textarea) {
+  textarea.style.height = "0";
+  textarea.style.height = textarea.scrollHeight + "px";
+}
+
+const messageTextarea = document.getElementById("message");
+messageTextarea.addEventListener("input", function () {
+  autoExpand(this);
+});
