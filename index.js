@@ -62,9 +62,14 @@ const p = document.getElementsByTagName("p");
 const labels = document.getElementsByTagName("label");
 const myselfPic = document.getElementById("myself-pic");
 const footer = document.getElementsByTagName("footer")[0];
+//  Contact Form
+const nameInput = document.getElementById("name");
+const emailImput = document.getElementById("email");
+const phoneInput = document.getElementById("phone");
+const subjetInput = document.getElementById("subject");
+const contactTextArea = document.getElementById("message");
 const contactSubmit = document.getElementById("submit");
 const contactSubmitImg = document.getElementById("submit-img");
-const contactTextArea = document.getElementById("message");
 
 function applyTheme() {
   if (darkTheme) {
@@ -99,7 +104,11 @@ function applyTheme() {
     }
     footer.classList.add("dark-footer");
     contactSubmit.classList.add("dark-submit");
-    contactTextArea.classList.add("dark-message");
+    nameInput.classList.add("dark-input");
+    emailImput.classList.add("dark-input");
+    phoneInput.classList.add("dark-input");
+    subjetInput.classList.add("dark-input");
+    contactTextArea.classList.add("dark-input");
   } else {
     body.classList.remove("dark-body");
     for (const evenCard of evenCards) {
@@ -132,7 +141,11 @@ function applyTheme() {
     }
     footer.classList.remove("dark-footer");
     contactSubmit.classList.remove("dark-submit");
-    contactTextArea.classList.remove("dark-message");
+    nameInput.classList.remove("dark-input");
+    emailImput.classList.remove("dark-input");
+    phoneInput.classList.remove("dark-input");
+    subjetInput.classList.remove("dark-input");
+    contactTextArea.classList.remove("dark-input");
   }
 }
 
