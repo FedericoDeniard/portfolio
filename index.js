@@ -129,7 +129,7 @@ function applyTheme() {
   }
 }
 
-// Form
+// Form Elastic Email SMTPJS
 
 const form = document.getElementById("contactform");
 const contactSubmit = document.getElementById("submit");
@@ -144,7 +144,7 @@ function sendEmail(e) {
   const message = document.getElementById("message");
 
   Email.send({
-    SecureToken: " 07646e85-d00a-4804-8cdd-8f6a646ef7c9",
+    SecureToken: "07646e85-d00a-4804-8cdd-8f6a646ef7c9",
     To: "fededeniard@gmail.com",
     From: email.value,
     Subject: subject.value,
