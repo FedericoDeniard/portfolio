@@ -325,7 +325,7 @@ h2 {
   align-items: center;
   width: 80%;
   max-width: 600px;
-  padding: 0px 50px;
+  padding: 0px 10px;
   gap: 10px;
   margin-top: 50px;
 }
@@ -333,13 +333,15 @@ h2 {
 .contact-form input {
   border: none;
   border-bottom: 1px solid #000;
-  width: 80%;
+  width: 100%;
+  max-width: 350px;
   padding: 0px 10px;
   height: 30px;
 }
 
 #message {
-  width: 80%;
+  width: 100%;
+  max-width: 350px;
   min-height: 50px;
   height: auto;
   resize: none;
