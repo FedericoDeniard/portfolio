@@ -153,7 +153,9 @@ function sendEmail(e) {
     Phone: ${phone.value} <br>
     Message: 
     ${message.value}`,
-  }).then((message) => alert(message));
+  }).then((message) =>
+    alert("Tu email fue enviado correctamente ¡Gracias por contactarte!")
+  );
 }
 
 form.addEventListener("submit", sendEmail);
