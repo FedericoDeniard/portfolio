@@ -146,9 +146,13 @@ function sendEmail(e) {
   Email.send({
     SecureToken: "07646e85-d00a-4804-8cdd-8f6a646ef7c9",
     To: "fededeniard@gmail.com",
-    From: email.value,
+    From: "fededeniard@gmail.com",
     Subject: subject.value,
-    Body: message.value,
+    Body: `From: ${email.value} <br>
+    Name: ${name.value} <br>
+    Phone: ${phone.value} <br>
+    Message: 
+    ${message.value}`,
   }).then((message) => alert(message));
 }
 
