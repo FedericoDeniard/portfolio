@@ -1,4 +1,4 @@
-// Cards
+// Cards animations on touch
 const cards = document.getElementsByClassName("card");
 for (let i = 0; i < cards.length; i++) {
   cards[i].addEventListener("contextmenu", function (e) {
@@ -149,7 +149,7 @@ function applyTheme() {
   }
 }
 
-// Form Elastic Email SMTPJS
+// Form - Elastic Email - SMTPJS
 
 const form = document.getElementById("contactform");
 
