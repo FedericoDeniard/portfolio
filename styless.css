@@ -171,6 +171,7 @@ h2 {
   white-space: nowrap;
   overflow-x: scroll;
   display: flex;
+  scroll-behavior: smooth;
 }
 
 .cards-container::-webkit-scrollbar-thumb {
