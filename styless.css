@@ -96,6 +96,7 @@ h2 {
   will-change: transform;
   -ms-scroll-snap-type: mandatory; /* Prefijo para navegadores Microsoft (IE/Edge) */
   -webkit-overflow-scrolling: touch; /* Mejora el scroll en dispositivos iOS */
+  position: relative;
 }
 
 .card {
@@ -179,7 +180,8 @@ h2 {
   top: -10000000px;
 }
 
-.cards-slider {
+.container-leftarrow,
+.container-rightarrow {
   display: none;
 }
 
@@ -479,11 +481,14 @@ footer {
     max-width: 400px;
   }
 
+  .projects {
+    width: fit-content;
+  }
+
   .cards-container {
     height: 525px;
     display: flex;
     align-items: center;
-    /* position: relative; */
   }
 
   .card {
@@ -519,22 +524,27 @@ footer {
   .icon {
     cursor: pointer;
   }
-  .cards-slider {
+
+  .container-leftarrow,
+  .container-rightarrow {
+    position: absolute;
+    z-index: 200;
+    height: 50px;
+    cursor: pointer;
     display: initial;
-    width: 100%;
-    max-width: 350px;
-    appearance: none;
-    height: 10px;
-    border-radius: 2px;
-    background-color: #c0c0c0;
+  }
+  .container-leftarrow:hover,
+  .container-rightarrow:hover {
+    transform: scale3d(1.2, 1.2, 1);
   }
 
-  .cards-slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 50px; /* Ancho del thumb */
-    height: 10px; /* Alto del thumb */
-    border-radius: 2px;
-    background: rgba(100, 100, 100, 1); /* Color del thumb */
-    cursor: pointer;
+  .container-leftarrow {
+    left: 0%;
+    top: 50%;
+  }
+
+  .container-rightarrow {
+    right: 0%;
+    top: 50%;
   }
 }
