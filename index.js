@@ -189,3 +189,29 @@ const messageTextarea = document.getElementById("message");
 messageTextarea.addEventListener("input", function () {
   autoExpand(this);
 });
+
+//  Cards Arrows
+const cardsContainer = document.getElementsByClassName("cards-container")[0];
+const cardsLeftArrow = document.getElementsByClassName(
+  "container-leftarrow"
+)[0];
+const cardsRightArrow = document.getElementsByClassName(
+  "container-rightarrow"
+)[0];
+
+const scrollLeft = () => {
+  cardsContainer.scrollBy({
+    left: -300,
+    behavior: "smooth",
+  });
+};
+
+const scrollRight = () => {
+  cardsContainer.scrollBy({
+    left: 300,
+    behavior: "smooth",
+  });
+};
+
+cardsLeftArrow.addEventListener("click", scrollLeft);
+cardsRightArrow.addEventListener("click", scrollRight);
