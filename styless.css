@@ -413,15 +413,41 @@ footer {
   background-color: #fff;
 }
 
+footer div {
+  width: 100px;
+}
+
+footer div:last-child {
+  display: flex;
+  justify-content: end;
+}
+
 .social-media {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .icon {
   height: 30px;
   width: 30px;
 }
+
+.home-area {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+
+#esp,
+#eng {
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+
+
 
 /*  Dark Theme */
 
