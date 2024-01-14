@@ -97,9 +97,7 @@ h2 {
   overflow-x: hidden;
   will-change: transform;
   -ms-scroll-snap-type: mandatory;
-  /* Prefijo para navegadores Microsoft (IE/Edge) */
   -webkit-overflow-scrolling: touch;
-  /* Mejora el scroll en dispositivos iOS */
   position: relative;
 }
 
@@ -157,8 +155,9 @@ h2 {
   right: 0;
   margin: auto;
   opacity: 0;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 400;
+  text-shadow: .5px .5px rgba(255, 255, 255, .2);
   color: #000;
 }
 
