@@ -215,3 +215,29 @@ const scrollRight = () => {
 
 cardsLeftArrow.addEventListener("click", scrollLeft);
 cardsRightArrow.addEventListener("click", scrollRight);
+
+//  Language
+
+const getLanguage = document.getElementsByTagName("html")[0];
+const homeArea = document.getElementsByClassName("home-area")[0];
+const flags = document.getElementsByClassName("icon flag");
+
+document.addEventListener("DOMContentLoaded", () => {
+  const espFlag = document.getElementById("esp");
+  const engFlag = document.getElementById("eng");
+  if (getLanguage.getAttribute("lang") === "es") {
+    espFlag.remove();
+  } else {
+    engFlag.remove();
+  }
+});
+
+Array.from(flags).forEach((flag) => {
+  flag.addEventListener("click", () => {
+    if (getLanguage.getAttribute("lang") === "es") {
+      window.location.href = "indexEN.html";
+    } else {
+      window.location.href = "index.html";
+    }
+  });
+});
