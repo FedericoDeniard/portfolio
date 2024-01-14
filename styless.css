@@ -8,6 +8,7 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -171,6 +172,15 @@ h2 {
   white-space: nowrap;
   overflow-x: scroll;
   display: flex;
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  position: absolute;
+  top: -10000000px;
+}
+
+.cards-slider {
+  display: none;
 }
 
 .cards-container::-webkit-scrollbar-thumb {
@@ -507,6 +517,24 @@ footer {
   }
 
   .icon {
+    cursor: pointer;
+  }
+  .cards-slider {
+    display: initial;
+    width: 100%;
+    max-width: 350px;
+    appearance: none;
+    height: 10px;
+    border-radius: 2px;
+    background-color: #c0c0c0;
+  }
+
+  .cards-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 50px; /* Ancho del thumb */
+    height: 10px; /* Alto del thumb */
+    border-radius: 2px;
+    background: rgba(100, 100, 100, 1); /* Color del thumb */
     cursor: pointer;
   }
 }

@@ -189,3 +189,16 @@ const messageTextarea = document.getElementById("message");
 messageTextarea.addEventListener("input", function () {
   autoExpand(this);
 });
+
+// Cards Sliders
+
+const cardsSlider = document.getElementById("cards-slider");
+cardsSlider.max = cards.length - 1;
+const cardsContainer = document.getElementById("class-container");
+
+cardsSlider.addEventListener("input", () => {
+  const sliderValue = cardsSlider.value;
+  if (sliderValue) {
+    cards[sliderValue].scrollIntoView({ behavior: "smooth" });
+  }
+});
